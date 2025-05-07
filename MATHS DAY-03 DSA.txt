@@ -55,3 +55,4 @@ return "odd"
 else{
 return "even"
 }
+TC-log2N
