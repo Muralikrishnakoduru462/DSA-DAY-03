@@ -1,0 +1,57 @@
+MATHS DAY-03 DSA
+
+1) Print all the factors of an number 
+
+Brute force-----
+
+function isNumber(n){
+    for(let i=1;i<=n;i++){
+        if(n%i === 0){
+            console.log(i)
+        }
+    }
+}
+isNumber(16)
+
+TC-O(n)
+optimal approach-----
+function isNumber(n){
+    for(let i=1;i*i<=n;i++){
+        if(n%i === 0){
+            if(i*i === n){
+                console.log(i)
+            }else{
+                console.log(i,n/i)
+            }
+        }
+    }
+}
+isNumber(16)
+
+TC-O(SQRT N)
+
+2)count the factors of given number
+function isNumber(n){
+    let cnt =0
+    for(let i=1;i*i<=n;i++){
+        if(n%i === 0){
+            if(i*i === n){
+               cnt+=1 
+            }else{
+                cnt+=2
+            }
+        }
+    }
+    console.log(cnt)
+}
+isNumber(16)
+
+TC- O(SQRT N)
+
+3)count the factors of given number even or odd
+let n = Math.sqrt(16);
+if(n*n === 16){
+return "odd"
+else{
+return "even"
+}
